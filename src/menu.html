@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta-El-Mediterráneo</title>
+    <link href="/styles/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body class="">
+    <header>
+        <div class="container d-flex justify-content-center">
+    <nav class="navbar navbar-expand-lg bg-body-transparent items-center">
+        <div class="container-fluid hstack gap-3">
+          <img src="/public/images/logo_el_mediterraneo.png" width="80" height="100">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav flex">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#entrantes">Entrantes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#principales">Principales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#postres">Postres</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#bebidas">Bebidas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    </header>
+  <div class="btn-bloc-pedidos container d-flex justify-content-end">
+<!-- Button trigger modal -->
+<button id="btn-notas" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+ <img src="/public/images/bloc-de-notas-y-lapiz-icon.png" class="icon-add">
+</button>
+</div>  
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Listo para pedir</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="lista-pedido" class="modal-body">
+       
+      </div>
+      
+      <div class="modal-footer">
+        <button id="btn-close" type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <section class="section"   id="entrantes">
+  <h1 class="titulo-cat container d-flex justify-content-top">Entrantes</h1>
+  <div  class="container-fluid d-flex flex-wrap justify-content-center mt-5">
+    <div class="card mx-3 bg-transparent" style="width: 18rem; border: 0cap;">
+        <img src="/public/images/el-mediterraneo/entrantes/entrante-croqueta-carrillera.jpg" class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
+        <div class="card-body ">
+          <h5 class="card-title">CROQUETA DE CARRILLERA</h5>
+          <p class="card-text">croqueta de carrillera de ternera con salsa hoisin.
+            Crujiente por fuera, melosa y sabrosa por dentro.</p>
+            
+                <p class="price">3,5/ud€</p> <p class="card-intolerance">🥚🥛🌾🌰</p>
+      
+          <button onclick="agregarAlCarrito('Croqueta de carrillera')"  name="croqueta-carrillera" id="abtn" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+       
+        </div>
+      </div>
+      <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+        <img src="/public/images/el-mediterraneo/entrantes/entrante-ensalada-pato.jpg" class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
+        <div class="card-body">
+          <h5 class="card-title">ENSALADA DE JAMÓN DE PATO</h5>
+          <p class="card-text">con vinagreta de mango, queso de cabra, almendra crocanti y tomate cherry asado. Sin gluten.</p>
+          
+            <p class="price">14€</p><p class="card-intolerance">🥛🌰</p>
+      
+          <button id="abtn" onclick="agregarAlCarrito('Ensalda jamón de pato')"  name="ensalada-jamon-pato" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+        
+        </div>
+      </div>
+      <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+        <img src="/public/images/el-mediterraneo/entrantes/entrante-huevos-trufados.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
+        <div class="card-body">
+          <h5 class="card-title">HERMÉTICO DE HUEVOS TRUFADOS A 65º</h5>
+          <p class="card-text">con patata en 3 texturas. Adaptado sin gluten / Vegetariano.</p>
+       
+            <p class="price">12€</p><p class="card-intolerance">🥚🥛🌾</p>
+    
+          <button id="abtn" onclick="agregarAlCarrito('Hermético de huevos trufados')"  name="huevos-trufados" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+       
+        </div>
+      </div>
+      <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+        <img src="/public/images/el-mediterraneo/entrantes/entrante-tataki-atun.jpg" class="card-img-top h-100 opacity-75" alt="entrante-jamon-iberico">
+        <div class="card-body">
+          <h5 class="card-title">TATAKI DE ATÚN ROJO FRÍO</h5>
+          <p class="card-text">acompañado de salsa teriyaki, alga wakame y mayonesa de kimchi. Sin gluten.</p>
+          
+            <p class="price">16€</p><p class="card-intolerance">🐟</p>
+  
+          <button id="abtn" onclick="agregarAlCarrito('Tataki de atún rojo frío')"  name="tataki-atun" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+       
+        </div>
+      </div>
+  </div>
+    </section>
+
+    <section class="section"   id="principales">
+        <h1 class="titulo-cat container d-flex justify-content-top">Principales</h1>
+        <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
+          <div class="card mx-3 bg-transparent" style="width: 18rem; border: 0cap;">
+              <img src="/public/images/el-mediterraneo/principales/principal-canelon-carne.jpg" class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
+              <div class="card-body ">
+                <h5 class="card-title">CANELONES RELLENOS DE CARNE</h5>
+                <p class="card-text">fusión entre lo tradicional y lo dulce que sorprende al paladar, con una textura suave y un toque crujiente final.
+                 </p>
+                      <p class="price">17€</p> <p class="card-intolerance">🥛🌾🌰</p>
+                
+                <button id="abtn" onclick="agregarAlCarrito('Canelones rellenos de carne')"  name="canelones-carne" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+           
+              </div>
+            </div>
+            <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+              <img src="/public/images/el-mediterraneo/principales/principal-lomo-salmon.jpg" class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
+              <div class="card-body">
+                <h5 class="card-title">LOMO DE SALMÓN CON TOQUE JAPO</h5>
+                <p class="card-text">a la brasa sobre duo de arroces salteados con verduritas, emulsión de teriyaki y ponzu, guacamole (de aguacate de la Comunidad Valenciana) y terminado con reducción hoisin. Sin gluten.</p>
+                
+                  <p class="price">22€</p><p class="card-intolerance">🥛🌰</p>
+                
+                <button id="abtn" onclick="agregarAlCarrito('Lomo de salmón con toque japo')" name="lomo-salmon" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+           
+              </div>
+            </div>
+            <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+              <img src="/public/images/el-mediterraneo/principales/principal-arroz-a-banda.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
+              <div class="card-body">
+                <h5 class="card-title">ARROZ A BANDA DE SEPIA, GAMBITAS Y AJETES CONFITADOS</h5>
+                <p class="card-text">con arroz valenciano (min. para 2 personas) . se acompaña con emulsión de perejil y alioli de tinta. Sin gluten.</p>
+             
+                  <p class="price">12,5€</p><p class="card-intolerance">🐟🦀</p>
+             
+                <button id="abtn" onclick="agregarAlCarrito('Arroz a la banda')"  name="arroz-a-banda" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+          
+              </div>
+            </div>
+            <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+              <img src="/public/images/el-mediterraneo/principales/principal-carrillada-cerdo.jpg" class="card-img-top h-100 opacity-75" alt="entrante-jamon-iberico">
+              <div class="card-body">
+                <h5 class="card-title">CARRILLADA DE CERDO CONFITADA EN SU JUGO</h5>
+                <p class="card-text">acompañado de puré trufado. Adaptado sin gluten.</p>
+                
+                  <p class="price">20€</p><p class="card-intolerance">🌰🌾🍷</p>
+      
+                <button id="abtn" onclick="agregarAlCarrito('Carrillada de cerdo')" name="carrillada-cerdo" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+   
+              </div>
+            </div>
+        </div>
+          </section>
+
+          <section class="section"   id="postres">
+            <h1 class="titulo-cat container d-flex justify-content-top">Postres</h1>
+            <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
+              <div class="card mx-3 bg-transparent" style="width: 18rem; border: 0cap;">
+                  <img src="/public/images/el-mediterraneo/postres/postre-torrija-brioche.jpg" class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
+                  <div class="card-body ">
+                    <h5 class="card-title">TORRIJA CON PAN BRIOCHE</h5>
+                    <p class="card-text">caramelizada con helado de turrón de Jijona y almendra crocanti.
+                     </p>
+                          <p class="price">9€</p> <p class="card-intolerance">🥛🌾🌰</p>
+                         
+                    <button id="abtn" onclick="agregarAlCarrito('Torrija con pan brioche')"  name="torrija-brioche" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+                 
+                  </div>
+                </div>
+                <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+                  <img src="/public/images/el-mediterraneo/postres/postre-tatin-manzana.jpg" class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
+                  <div class="card-body">
+                    <h5 class="card-title">TARTA TATÍN DE MANZANA</h5>
+                    <p class="card-text">con helado de leche de coco y almendra crocanti.</p>
+                    
+                      <p class="price">9€</p><p class="card-intolerance">🥛🌾🌰</p>
+                  
+                      <button id="abtn" onclick="agregarAlCarrito('Tarta de tatín de manzana')"  name="tarta-tatin" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+                 
+                    </div>
+                </div>
+                <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+                  <img src="/public/images/el-mediterraneo/postres/postre-tarta-queso.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
+                  <div class="card-body">
+                    <h5 class="card-title">TARTA DE QUESO</h5>
+                    <p class="card-text">con confitura de frutos rojos y arándanos frescos.</p>
+                 
+                      <p class="price">8€</p><p class="card-intolerance">🥛🌾🌰</p>
+                
+                    <button id="abtn" onclick="agregarAlCarrito('Tarta de queso')"  class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+                 
+                  </div>
+                </div>
+                <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+                  <img src="/public/images/el-mediterraneo/postres/postre-brownie.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
+                  <div class="card-body">
+                    <h5 class="card-title">BROWNIE DE CHOCOLATE NEGRO</h5>
+                    <p class="card-text">con nueces y helado de vainilla. Vegetariano.</p>
+                 
+                      <p class="price">8€</p><p class="card-intolerance">🥛🌾🌰</p>
+              
+                    <button id="abtn" onclick="agregarAlCarrito('Brownie de chocolate negro')"  name="brownie-chocolate" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+                 
+                  </div>
+                </div>
+            </div>
+              </section>
+              <section class="section"    id="bebidas">
+                <h1 class="titulo-cat container d-flex justify-content-top">Bebidas</h1>
+                <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
+                  <div class="card mx-3 bg-transparent" style="width: 18rem; border: 0cap;">
+                      <img src="/public/images/el-mediterraneo/bebidas/bebidas-agua.jpg" class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
+                      <div class="card-body ">
+                        <h5 class="card-title">Agua/Agua con gas</h5>
+                        <p class="price">3€</p>
+                       
+                        <button id="abtn" onclick="agregarAlCarrito('Agua')"  name="agua" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
+                    
+                      </div>
+                    </div>
+                    <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+                      <img src="/public/images/el-mediterraneo/bebidas/bebidas-refrescos.jpg" class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
+                      <div class="card-body">
+                        <h5 class="card-title">Refrescos</h5>
+                     
+                        
+                          <p class="price">3€</p>
+                       
+                        <button id="abtn" onclick="agregarAlCarrito('Refresco')" name="Refrescos" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
+                     
+                      </div>
+                    </div>
+                    <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+                      <img src="/public/images/el-mediterraneo/bebidas/bebidas-vinos.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
+                      <div class="card-body">
+                        <h5 class="card-title">Vinos</h5>
+                     
+                     
+                          <p class="price">7€</p>
+                       
+                        <button id="abtn" onclick="agregarAlCarrito('Vino')"  name="vinos" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></a>
+                     
+                      </div>
+                      
+                    </div>
+                    <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
+                      <img src="/public/images/el-mediterraneo/bebidas/bebidas-cocteles.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
+                      <div class="card-body">
+                        <h5 class="card-title">Cócteles</h5>
+                     
+                     
+                          <p class="price">8€</p>
+                       
+                        <button id="abtn" onclick="agregarAlCarrito('cóctel')"  name="cocteles" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
+                   
+                      </div>
+                      
+                    </div>
+                </div>  
+                  </section>
+                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                    <div id="toastAgregado" class="toast align-items-center  border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                      <div class="d-flex">
+                        <div class="toast-body">
+                          Plato agregado al pedido 🍽️
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <script src="send_order.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
