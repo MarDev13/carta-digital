@@ -1,139 +1,164 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
 .petit-formal-script-regular {
   font-family: "Petit Formal Script", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-#btn-idioma-es{
+#btn-idioma-es {
   border-radius: 50% !important;
   width: 2rem;
   height: 2rem;
   background-image: url(/public/images/icon_spain.png) !important;
-background-size: cover;  
+  background-size: cover;
+  opacity: 80%;
 }
 
-#btn-idioma-en{
+#btn-idioma-en {
   border-radius: 50% !important;
   width: 2rem;
   height: 2rem;
   background-image: url(/public/images/icon-reino-unido.png) !important;
-background-size: cover;
-  
+  background-size: cover;
+  opacity: 80%;
 }
-.section{
+
+.section {
   margin-top: 4rem;
 }
-.titulo-cat{
+
+.titulo-cat {
   margin-bottom: 4rem;
 }
+
 .gilda-display-regular {
   font-family: "Gilda Display", serif;
   font-weight: 400;
   font-style: normal;
 }
-.btn-bloc-pedidos{
+
+.btn-bloc-pedidos {
   position: fixed;
 }
-h5{
+
+h5 {
   font-family: "Gilda Display", serif;
-  
+
 }
-#toastAgregado{
-  background-color: rgb(83, 86, 128) !important; 
+
+#toastAgregado {
+  background-color: rgb(83, 86, 128) !important;
   font-style: white !important;
 
 }
-#btn-close{
+
+#btn-close {
   width: auto;
 }
-p{
+
+p {
   font-family: "Gilda Display", serif;
 }
-.icon-add{
+
+.icon-add {
   height: 20px;
   opacity: 80%;
 }
-a{
+
+a {
   font-family: "Gilda Display", serif;
 }
-h1{
+
+h1 {
+  font-family: "Petit Formal Script", cursive;
+}
+
+h2 {
   font-family: "Petit Formal Script", cursive;
 }
 
 
-body{
-    margin: auto;
-    min-width: 80%;
-    max-width: 100%;
-    background: rgb(70,74,99);
-background: linear-gradient(90deg, rgba(70,74,99,1) 0%, rgba(148,150,159,1) 35%, rgba(176,172,155,1) 50%, rgba(70,74,99,1) 97%);
+body {
+  margin: auto;
+  min-width: 80%;
+  max-width: 100%;
+  background: rgb(70, 74, 99);
+  background: linear-gradient(90deg, rgba(70, 74, 99, 1) 0%, rgba(148, 150, 159, 1) 35%, rgba(176, 172, 155, 1) 50%, rgba(70, 74, 99, 1) 97%);
 }
+
 .card-img-top {
-    max-height: 200px; 
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  .card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-body a.btn {
-    margin-top: auto; /* Empuja el botón hacia abajo */
-  }
-  .card-intolerance{
-    margin-top: auto;
-  }
-  .btn{
-  background-color: rgba(83, 86, 128, 0.692) !important; 
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body a.btn {
+  margin-top: auto;
+  /* Empuja el botón hacia abajo */
+}
+
+.card-intolerance {
+  margin-top: auto;
+}
+
+.btn {
+  background-color: rgba(83, 86, 128, 0.692) !important;
   border-color: beige !important;
   width: 3rem;
-  
-  }
- 
-  @media (hover: hover) {
-    /* when hover is supported */
-   #abtn:hover {
-      color: black !important;
-      background:   rgb(54, 59, 121)  !important;
-      transition: 2s;
-    }
-  }
-  .icon-tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: help;
-  }
 
-  .icon-tooltip .tooltip-text {
-    visibility: hidden;
-    width: max-content;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px 8px;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 10;
-    bottom: 125%; /* arriba del icono */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 12px;
-    white-space: nowrap;
-  }
+}
 
-  .icon-tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-    
+@media (hover: hover) {
+
+  /* when hover is supported */
+  .abtn:hover {
+    color: black !important;
+    background: rgb(54, 59, 121) !important;
+    transition: 2s;
   }
-  .price{
-    align-items: center;
-    font-weight: 700;
-  }
+}
+
+.icon-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.icon-tooltip .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%;
+  /* arriba del icono */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.icon-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+
+}
+
+.price {
+  align-items: center;
+  font-weight: 700;
+}

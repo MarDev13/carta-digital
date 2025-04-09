@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta-El-Mediterráneo</title>
-    <link href="/styles/style.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta-El-Mediterráneo</title>
+  <link href="/styles/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
-<body class="">
-    <header>
-        <div class="container d-flex justify-content-center">
-    <nav class="navbar navbar-expand-lg bg-body-transparent items-center">
+
+<body>
+  <header>
+    <div class="container d-flex justify-content-center">
+      <nav class="navbar navbar-expand-lg bg-body-transparent items-center">
         <div class="container-fluid hstack gap-3">
           <img src="/public/images/logo_el_mediterraneo.png" width="80" height="100">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav flex">
               <li class="nav-item">
-                <a class="nav-link traducible" data-es="Entrantes"  data-en="Starters" aria-current="page" href="#entrantes">Entrantes</a>
+                <a class="nav-link traducible" data-es="Entrantes" data-en="Starters" aria-current="page"
+                  href="#entrantes">Entrantes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link traducible" data-es="Principales" data-en="Main courses" href="#principales">Principales</a>
+                <a class="nav-link traducible" data-es="Principales" data-en="Main courses"
+                  href="#principales">Principales</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link traducible" data-es="Postres" data-en="Desserts" href="#postres">Postres</a>
@@ -33,266 +39,358 @@
             </ul>
           </div>
           <!-- Botones para seleccionar idioma -->
-<button id="btn-idioma-es" class="btn btn-secondary"></button>
-<button id="btn-idioma-en" class="btn btn-secondary"></button>
-
+          <button id="btn-idioma-es" class="btn btn-secondary"></button>
+          <button id="btn-idioma-en" class="btn btn-secondary"></button>
         </div>
       </nav>
     </div>
-    </header>
+  </header>
   <div class="btn-bloc-pedidos container d-flex justify-content-end">
-<!-- Button trigger modal -->
-<button id="btn-notas" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
- <img src="/public/images/bloc-de-notas-y-lapiz-icon.png" class="icon-add">
-</button>
-</div>  
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5 traducible" data-es="Listo para pedir" data-en="Ready to order" id="staticBackdropLabel">Listo para pedir</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div id="lista-pedido" class="modal-body">
-       
-      </div>
-      
-      <div class="modal-footer">
-        <button id="btn-close" type="button" class="btn btn-secondary traducible" data-es="cerrar" data-en="close" data-bs-dismiss="modal">cerrar</button>
+    <!-- Button trigger modal -->
+    <button id="btn-notas" type="button" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop">
+      <img src="/public/images/bloc-de-notas-y-lapiz-icon.png" class="icon-add">
+    </button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 traducible" data-es="Listo para pedir" data-en="Ready to order"
+            id="staticBackdropLabel">Listo para pedir</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="lista-pedido" class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button id="btn-close" type="button" class="btn btn-secondary traducible" data-es="cerrar" data-en="close"
+            data-bs-dismiss="modal">cerrar</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <main>
+    <section class="section" id="entrantes">
+      <h2 class="titulo-cat container d-flex justify-content-top traducible" data-es="Entrantes" data-en="Starters">
+        Entrantes</h2>
+      <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
+        <div class="card mx-3 bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/entrantes/entrante-croqueta-carrillera.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
+          <div class="card-body ">
+            <h5 class="card-title traducible" data-es="CROQUETA DE CARRILLERA" data-en="CHEEK CROQUETTE">CROQUETA DE
+              CARRILLERA</h5>
+            <p class="card-text traducible" data-es="croqueta de carrillera de ternera con salsa hoisin."
+              data-en="beef cheek croquette with hoisin sauce.Crispy on the outside, sweet and tasty on the inside.">
+              croqueta de carrillera de ternera con salsa hoisin.
+              Crujiente por fuera, melosa y sabrosa por dentro.</p>
+            <p class="price">3,5/ud€</p>
+            <p class="card-intolerance">🥚🥛🌾🌰</p>
+            <button onclick="agregarAlCarrito('Croqueta de carrillera')" name="croqueta-carrillera"
+              class="btn btn-primary abtn"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/entrantes/entrante-ensalada-pato.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="ENSALADA DE JAMÓN DE PATO" data-en="DUCK HAM  SALAD">ENSALADA DE
+              JAMÓN DE PATO</h5>
+            <p class="card-text traducible"
+              data-es="con vinagreta de mango, queso de cabra, almendra crocanti y tomate cherry asado. Sin gluten."
+              data-en="with mango vinaigrette, goat cheese, almond crocanti, and roasted cherry tomatoes. Gluten-free.">
+              con vinagreta de mango, queso de cabra, almendra crocanti y tomate cherry asado. Sin gluten.</p>
+            <p class="price">14€</p>
+            <p class="card-intolerance">🥛🌰</p>
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Ensalda jamón de pato')"
+              name="ensalada-jamon-pato"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/entrantes/entrante-huevos-trufados.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="HERMÉTICO DE HUEVOS TRUFADOS A 65º"
+              data-en="HERMETIC TRUFFLED EGGS AT 65º">HERMÉTICO DE HUEVOS TRUFADOS A 65º</h5>
+            <p class="card-text traducible" data-es="con patata en 3 texturas. Adaptado sin gluten / Vegetariano."
+              data-en="with potato in 3 textures. Gluten-free / Vegetarian.">con patata en 3 texturas. Adaptado sin
+              gluten
+              / Vegetariano.</p>
 
+            <p class="price">12€</p>
+            <p class="card-intolerance">🥚🥛🌾</p>
 
-  <section class="section"   id="entrantes">
-  <h1 class="titulo-cat container d-flex justify-content-top traducible" data-es="Entrantes" data-en="Starters">Entrantes</h1>
-  <div  class="container-fluid d-flex flex-wrap justify-content-center mt-5">
-    <div class="card mx-3 bg-transparent" style="width: 18rem; border: 0cap;">
-        <img src="/public/images/el-mediterraneo/entrantes/entrante-croqueta-carrillera.jpg" class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
-        <div class="card-body ">
-          <h5 class="card-title traducible" data-es="CROQUETA DE CARRILLERA" data-en="CHEEK CROQUETTE">CROQUETA DE CARRILLERA</h5>
-          <p class="card-text traducible" data-es="croqueta de carrillera de ternera con salsa hoisin." data-en="beef cheek croquette with hoisin sauce.Crispy on the outside, sweet and tasty on the inside.">croqueta de carrillera de ternera con salsa hoisin.
-            Crujiente por fuera, melosa y sabrosa por dentro.</p>
-            
-                <p class="price">3,5/ud€</p> <p class="card-intolerance">🥚🥛🌾🌰</p>
-      
-          <button onclick="agregarAlCarrito('Croqueta de carrillera')"  name="croqueta-carrillera" id="abtn" class="btn  btn-sm text-black" ><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-       
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Hermético de huevos trufados')"
+              name="huevos-trufados"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/entrantes/entrante-tataki-atun.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-jamon-iberico">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="TATAKI DE ATÚN ROJO FRÍO" data-en="COLD BLUEFISH TATAKI">TATAKI
+              DE
+              ATÚN ROJO FRÍO</h5>
+            <p class="card-text traducible"
+              data-es="acompañado de salsa teriyaki, alga wakame y mayonesa de kimchi. Sin gluten."
+              data-en="Accompanied by teriyaki sauce, wakame seaweed, and kimchi mayonnaise. Gluten-free.">acompañado de
+              salsa teriyaki, alga wakame y mayonesa de kimchi. Sin gluten.</p>
+            <p class="price">16€</p>
+            <p class="card-intolerance">🐟</p>
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Tataki de atún rojo frío')"
+              name="tataki-atun"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+          </div>
         </div>
       </div>
-      <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-        <img src="/public/images/el-mediterraneo/entrantes/entrante-ensalada-pato.jpg" class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
-        <div class="card-body">
-          <h5 class="card-title traducible" data-es="ENSALADA DE JAMÓN DE PATO" data-en="DUCK HAM  SALAD">ENSALADA DE JAMÓN DE PATO</h5>
-          <p class="card-text traducible" data-es="con vinagreta de mango, queso de cabra, almendra crocanti y tomate cherry asado. Sin gluten." data-en="with mango vinaigrette, goat cheese, almond crocanti, and roasted cherry tomatoes. Gluten-free.">con vinagreta de mango, queso de cabra, almendra crocanti y tomate cherry asado. Sin gluten.</p>
-          
-            <p class="price">14€</p><p class="card-intolerance">🥛🌰</p>
-      
-          <button id="abtn" onclick="agregarAlCarrito('Ensalda jamón de pato')"  name="ensalada-jamon-pato" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-        
-        </div>
-      </div>
-      <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-        <img src="/public/images/el-mediterraneo/entrantes/entrante-huevos-trufados.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
-        <div class="card-body">
-          <h5 class="card-title traducible" data-es="HERMÉTICO DE HUEVOS TRUFADOS A 65º" data-en="HERMETIC TRUFFLED EGGS AT 65º">HERMÉTICO DE HUEVOS TRUFADOS A 65º</h5>
-          <p class="card-text traducible" data-es="con patata en 3 texturas. Adaptado sin gluten / Vegetariano." data-en="with potato in 3 textures. Gluten-free / Vegetarian.">con patata en 3 texturas. Adaptado sin gluten / Vegetariano.</p>
-       
-            <p class="price">12€</p><p class="card-intolerance">🥚🥛🌾</p>
-    
-          <button id="abtn" onclick="agregarAlCarrito('Hermético de huevos trufados')"  name="huevos-trufados" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-       
-        </div>
-      </div>
-      <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-        <img src="/public/images/el-mediterraneo/entrantes/entrante-tataki-atun.jpg" class="card-img-top h-100 opacity-75" alt="entrante-jamon-iberico">
-        <div class="card-body">
-          <h5 class="card-title traducible" data-es="TATAKI DE ATÚN ROJO FRÍO" data-en="COLD BLUEFISH TATAKI">TATAKI DE ATÚN ROJO FRÍO</h5>
-          <p class="card-text traducible" data-es="acompañado de salsa teriyaki, alga wakame y mayonesa de kimchi. Sin gluten." data-en="Accompanied by teriyaki sauce, wakame seaweed, and kimchi mayonnaise. Gluten-free.">acompañado de salsa teriyaki, alga wakame y mayonesa de kimchi. Sin gluten.</p>
-          
-            <p class="price">16€</p><p class="card-intolerance">🐟</p>
-  
-          <button id="abtn" onclick="agregarAlCarrito('Tataki de atún rojo frío')"  name="tataki-atun" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-       
-        </div>
-      </div>
-  </div>
     </section>
 
     <section class="section" id="principales">
-        <h1 class="titulo-cat container d-flex justify-content-top traducible" data-es="Principales" data-en="Main courses">Principales</h1>
-        <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
-          <div class="card mx-3 bg-transparent" style="width: 18rem; border: 0cap;">
-              <img src="/public/images/el-mediterraneo/principales/principal-canelon-carne.jpg" class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
-              <div class="card-body ">
-                <h5 class="card-title traducible" data-es="CANELONES RELLENOS DE CARNE" data-en="CANNELONI STUFFED WITH MEAT">CANELONES RELLENOS DE CARNE</h5>
-                <p class="card-text traducible" data-es="usión entre lo tradicional y lo dulce que sorprende al paladar, con una textura suave y un toque crujiente final." data-en="A fusion between traditional and sweet that surprises the palate, with a soft texture and a final crunchy touch.">fusión entre lo tradicional y lo dulce que sorprende al paladar, con una textura suave y un toque crujiente final.
-                 </p>
-                      <p class="price">17€</p> <p class="card-intolerance">🥛🌾🌰</p>
-                
-                <button id="abtn" onclick="agregarAlCarrito('Canelones rellenos de carne')"  name="canelones-carne" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-           
-              </div>
-            </div>
-            <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-              <img src="/public/images/el-mediterraneo/principales/principal-lomo-salmon.jpg" class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
-              <div class="card-body">
-                <h5 class="card-title traducible" data-es="LOMO DE SALMÓN CON TOQUE JAPO" data-en="SALMON LOIN WITH A JAPANESE TOUCH">LOMO DE SALMÓN CON TOQUE JAPO</h5>
-                <p class="card-text traducible" data-es="a la brasa sobre duo de arroces salteados con verduritas, emulsión de teriyaki y ponzu, guacamole (de aguacate de la Comunidad Valenciana) y terminado con reducción hoisin. Sin gluten." data-en="Grilled over a duo of sautéed rice dishes with vegetables, teriyaki and ponzu emulsion, guacamole (made with avocado from the Valencian Community), and finished with a hoisin reduction. Gluten-free.">a la brasa sobre duo de arroces salteados con verduritas, emulsión de teriyaki y ponzu, guacamole (de aguacate de la Comunidad Valenciana) y terminado con reducción hoisin. Sin gluten.</p>
-                
-                  <p class="price">22€</p><p class="card-intolerance">🥛🌰</p>
-                
-                <button id="abtn" onclick="agregarAlCarrito('Lomo de salmón con toque japo')" name="lomo-salmon" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-           
-              </div>
-            </div>
-            <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-              <img src="/public/images/el-mediterraneo/principales/principal-arroz-a-banda.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
-              <div class="card-body">
-                <h5 class="card-title traducible" data-es="ARROZ A BANDA DE SEPIA, GAMBITAS Y AJETES CONFITADOS" data-en="CUTTLEFISH, PRAWN AND CONFIT GARLIC RICE">ARROZ A BANDA DE SEPIA, GAMBITAS Y AJETES CONFITADOS</h5>
-                <p class="card-text traducible" data-es="con arroz valenciano (min. para 2 personas) . se acompaña con emulsión de perejil y alioli de tinta. Sin gluten." data-en="with Valencian rice (serves at least 2). Served with parsley emulsion and ink aioli. Gluten-free.">con arroz valenciano (min. para 2 personas) . se acompaña con emulsión de perejil y alioli de tinta. Sin gluten.</p>
-             
-                  <p class="price">12,5€</p><p class="card-intolerance">🐟🦀</p>
-             
-                <button id="abtn" onclick="agregarAlCarrito('Arroz a la banda')"  name="arroz-a-banda" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-          
-              </div>
-            </div>
-            <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-              <img src="/public/images/el-mediterraneo/principales/principal-carrillada-cerdo.jpg" class="card-img-top h-100 opacity-75" alt="entrante-jamon-iberico">
-              <div class="card-body">
-                <h5 class="card-title traducible" data-es="CARRILLADA DE CERDO CONFITADA EN SU JUGO" data-en="PORK CHEEKS CONFIT IN ITS OWN JUICE">CARRILLADA DE CERDO CONFITADA EN SU JUGO</h5>
-                <p class="card-text traducible" data-es="acompañado de puré trufado. Adaptado sin gluten." data-en="accompanied by truffled puree. Adapted gluten-free.">acompañado de puré trufado. Adaptado sin gluten.</p>
-                
-                  <p class="price">20€</p><p class="card-intolerance">🌰🌾🍷</p>
-      
-                <button id="abtn" onclick="agregarAlCarrito('Carrillada de cerdo')" name="carrillada-cerdo" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-   
-              </div>
-            </div>
+      <h2 class="titulo-cat container d-flex justify-content-top traducible" data-es="Principales"
+        data-en="Main courses">
+        Principales</h2>
+      <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
+        <div class="card mx-3 bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/principales/principal-canelon-carne.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
+          <div class="card-body ">
+            <h5 class="card-title traducible" data-es="CANELONES RELLENOS DE CARNE"
+              data-en="CANNELONI STUFFED WITH MEAT">
+              CANELONES RELLENOS DE CARNE</h5>
+            <p class="card-text traducible"
+              data-es="fusión entre lo tradicional y lo dulce que sorprende al paladar, con una textura suave y un toque crujiente final."
+              data-en="A fusion between traditional and sweet that surprises the palate, with a soft texture and a final crunchy touch.">
+              fusión entre lo tradicional y lo dulce que sorprende al paladar, con una textura suave y un toque
+              crujiente
+              final.
+            </p>
+            <p class="price">17€</p>
+            <p class="card-intolerance">🥛🌾🌰</p>
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Canelones rellenos de carne')"
+              name="canelones-carne"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+          </div>
         </div>
-          </section>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/principales/principal-lomo-salmon.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="LOMO DE SALMÓN CON TOQUE JAPO"
+              data-en="SALMON LOIN WITH A JAPANESE TOUCH">LOMO DE SALMÓN CON TOQUE JAPO</h5>
+            <p class="card-text traducible"
+              data-es="a la brasa sobre duo de arroces salteados con verduritas, emulsión de teriyaki y ponzu, guacamole (de aguacate de la Comunidad Valenciana) y terminado con reducción hoisin. Sin gluten."
+              data-en="Grilled over a duo of sautéed rice dishes with vegetables, teriyaki and ponzu emulsion, guacamole (made with avocado from the Valencian Community), and finished with a hoisin reduction. Gluten-free.">
+              a la brasa sobre duo de arroces salteados con verduritas, emulsión de teriyaki y ponzu, guacamole (de
+              aguacate de la Comunidad Valenciana) y terminado con reducción hoisin. Sin gluten.</p>
 
-          <section class="section" id="postres">
-            <h1 class="titulo-cat container d-flex justify-content-top traducible" data-es="Postres" data-en="Desserts">Postres</h1>
-            <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
-              <div class="card mx-3 bg-transparent" style="width: 18rem; border: 0cap;">
-                  <img src="/public/images/el-mediterraneo/postres/postre-torrija-brioche.jpg" class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
-                  <div class="card-body ">
-                    <h5 class="card-title traducible" data-es="TORRIJA CON PAN BRIOCHE" data-en="FRENCH TOAST WITH BRIOCHE BREAD">TORRIJA CON PAN BRIOCHE</h5>
-                    <p class="card-text traducible" data-es="caramelizada con helado de turrón de Jijona y almendra crocanti." data-en="caramelized with Jijona nougat ice cream and crunchy almonds.">caramelizada con helado de turrón de Jijona y almendra crocanti.
-                     </p>
-                          <p class="price">9€</p> <p class="card-intolerance">🥛🌾🌰</p>
-                         
-                    <button id="abtn" onclick="agregarAlCarrito('Torrija con pan brioche')"  name="torrija-brioche" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-                 
-                  </div>
-                </div>
-                <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-                  <img src="/public/images/el-mediterraneo/postres/postre-tatin-manzana.jpg" class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
-                  <div class="card-body">
-                    <h5 class="card-title traducible" data-es="TARTA TATÍN DE MANZANA" data-en="APPLE TARTE TATIN">TARTA TATÍN DE MANZANA</h5>
-                    <p class="card-text traducible" data-es="con helado de leche de coco y almendra crocanti." data-en="with coconut milk ice cream and almond crocanti.">con helado de leche de coco y almendra crocanti.</p>
-                    
-                      <p class="price">9€</p><p class="card-intolerance">🥛🌾🌰</p>
-                  
-                      <button id="abtn" onclick="agregarAlCarrito('Tarta de tatín de manzana')"  name="tarta-tatin" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-                 
-                    </div>
-                </div>
-                <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-                  <img src="/public/images/el-mediterraneo/postres/postre-tarta-queso.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
-                  <div class="card-body">
-                    <h5 class="card-title traducible" data-es="TARTA DE QUESO" data-en="CHEESECAKE">TARTA DE QUESO</h5>
-                    <p class="card-text traducible" data-es="con confitura de frutos rojos y arándanos frescos." data-en="with red fruit jam and fresh blueberries.">con confitura de frutos rojos y arándanos frescos.</p>
-                 
-                      <p class="price">8€</p><p class="card-intolerance">🥛🌾🌰</p>
-                
-                    <button id="abtn" onclick="agregarAlCarrito('Tarta de queso')"  class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-                 
-                  </div>
-                </div>
-                <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-                  <img src="/public/images/el-mediterraneo/postres/postre-brownie.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
-                  <div class="card-body">
-                    <h5 class="card-title traducible" data-es="BROWNIE DE CHOCOLATE NEGRO" data-en="DARK CHOCOLATE BROWNIE">BROWNIE DE CHOCOLATE NEGRO</h5>
-                    <p class="card-text traducible" data-es="con nueces y helado de vainilla. Vegetariano." data-en="with nuts and vanilla ice cream. Vegetarian.">con nueces y helado de vainilla. Vegetariano.</p>
-                 
-                      <p class="price">8€</p><p class="card-intolerance">🥛🌾🌰</p>
-              
-                    <button id="abtn" onclick="agregarAlCarrito('Brownie de chocolate negro')"  name="brownie-chocolate" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
-                 
-                  </div>
-                </div>
-            </div>
-              </section>
-              <section class="section" id="bebidas">
-                <h1 class="titulo-cat container d-flex justify-content-top traducible" data-es="Bebidas" data-en="Drinks">Bebidas</h1>
-                <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
-                  <div class="card mx-3 bg-transparent" style="width: 18rem; border: 0cap;">
-                      <img src="/public/images/el-mediterraneo/bebidas/bebidas-agua.jpg" class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
-                      <div class="card-body ">
-                        <h5 class="card-title traducible" data-es="Agua/Agua con gas" data-en="Water/Sparkling Water">Agua/Agua con gas</h5>
-                        <p class="price">3€</p>
-                       
-                        <button id="abtn" onclick="agregarAlCarrito('Agua')"  name="agua" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
-                    
-                      </div>
-                    </div>
-                    <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-                      <img src="/public/images/el-mediterraneo/bebidas/bebidas-refrescos.jpg" class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
-                      <div class="card-body">
-                        <h5 class="card-title traducible" data-es="Refrescos" data-en="Soft drinks">Refrescos</h5>
-                     
-                        
-                          <p class="price">3€</p>
-                       
-                        <button id="abtn" onclick="agregarAlCarrito('Refresco')" name="Refrescos" class="btn btn-sm text-black"><img class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
-                     
-                      </div>
-                    </div>
-                    <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-                      <img src="/public/images/el-mediterraneo/bebidas/bebidas-vinos.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
-                      <div class="card-body">
-                        <h5 class="card-title traducible" data-es="Vinos" data-en="Wines">Vinos</h5>
-                     
-                     
-                          <p class="price">7€</p>
-                       
-                        <button id="abtn" onclick="agregarAlCarrito('Vino')"  name="vinos" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></a>
-                     
-                      </div>
-                      
-                    </div>
-                    <div class="card mx-3  bg-transparent" style="width: 18rem; border: 0cap;">
-                      <img src="/public/images/el-mediterraneo/bebidas/bebidas-cocteles.jpg" class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
-                      <div class="card-body">
-                        <h5 class="card-title traducible" data-es="Cócteles" data-en="Cocktails">Cócteles</h5>
-                     
-                     
-                          <p class="price">8€</p>
-                       
-                        <button id="abtn" onclick="agregarAlCarrito('cóctel')"  name="cocteles" class="btn  btn-sm text-black"><img class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
-                   
-                      </div>
-                      
-                    </div>
-                </div>  
-                  </section>
-                  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-                    <div id="toastAgregado" class="toast align-items-center  border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                      <div class="d-flex">
-                        <div class="toast-body traducible" data-es="Plato agregado al pedido 🍽️" data-en="Dish added to order 🍽️">
-                          Plato agregado al pedido 🍽️
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <script src="src/traduccion.js"></script>
-                  <script src="src/send_order.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+            <p class="price">22€</p>
+            <p class="card-intolerance">🥛🌰</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Lomo de salmón con toque japo')"
+              name="lomo-salmon"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/principales/principal-arroz-a-banda.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-huevos-trufados">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="ARROZ A BANDA DE SEPIA, GAMBITAS Y AJETES CONFITADOS"
+              data-en="CUTTLEFISH, PRAWN AND CONFIT GARLIC RICE">ARROZ A BANDA DE SEPIA, GAMBITAS Y AJETES CONFITADOS
+            </h5>
+            <p class="card-text traducible"
+              data-es="con arroz valenciano (min. para 2 personas) . se acompaña con emulsión de perejil y alioli de tinta. Sin gluten."
+              data-en="with Valencian rice (serves at least 2). Served with parsley emulsion and ink aioli. Gluten-free.">
+              con arroz valenciano (min. para 2 personas) . se acompaña con emulsión de perejil y alioli de tinta. Sin
+              gluten.</p>
+
+            <p class="price">12,5€</p>
+            <p class="card-intolerance">🐟🦀</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Arroz a la banda')"
+              name="arroz-a-banda"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/principales/principal-carrillada-cerdo.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-jamon-iberico">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="CARRILLADA DE CERDO CONFITADA EN SU JUGO"
+              data-en="PORK CHEEKS CONFIT IN ITS OWN JUICE">CARRILLADA DE CERDO CONFITADA EN SU JUGO</h5>
+            <p class="card-text traducible" data-es="acompañado de puré trufado. Adaptado sin gluten."
+              data-en="accompanied by truffled puree. Adapted gluten-free.">acompañado de puré trufado. Adaptado sin
+              gluten.</p>
+
+            <p class="price">20€</p>
+            <p class="card-intolerance">🌰🌾🍷</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Carrillada de cerdo')"
+              name="carrillada-cerdo"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="postres">
+      <h2 class="titulo-cat container d-flex justify-content-top traducible" data-es="Postres" data-en="Desserts">
+        Postres
+      </h2>
+      <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
+        <div class="card mx-3 bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/postres/postre-torrija-brioche.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-croqueta-carrillera">
+          <div class="card-body ">
+            <h5 class="card-title traducible" data-es="TORRIJA CON PAN BRIOCHE"
+              data-en="FRENCH TOAST WITH BRIOCHE BREAD">
+              TORRIJA CON PAN BRIOCHE</h5>
+            <p class="card-text traducible" data-es="caramelizada con helado de turrón de Jijona y almendra crocanti."
+              data-en="caramelized with Jijona nougat ice cream and crunchy almonds.">caramelizada con helado de turrón
+              de
+              Jijona y almendra crocanti.
+            </p>
+            <p class="price">9€</p>
+            <p class="card-intolerance">🥛🌾🌰</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Torrija con pan brioche')"
+              name="torrija-brioche"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/postres/postre-tatin-manzana.jpg"
+            class="card-img-top h-100 opacity-75" alt="entrante-ensalada-pato">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="TARTA TATÍN DE MANZANA" data-en="APPLE TARTE TATIN">TARTA TATÍN
+              DE
+              MANZANA</h5>
+            <p class="card-text traducible" data-es="con helado de leche de coco y almendra crocanti."
+              data-en="with coconut milk ice cream and almond crocanti.">con helado de leche de coco y almendra
+              crocanti.
+            </p>
+
+            <p class="price">9€</p>
+            <p class="card-intolerance">🥛🌾🌰</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Tarta de tatín de manzana')"
+              name="tarta-tatin"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/postres/postre-tarta-queso.jpg" class="card-img-top h-100 opacity-75"
+            alt="entrante-huevos-trufados">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="TARTA DE QUESO" data-en="CHEESECAKE">TARTA DE QUESO</h5>
+            <p class="card-text traducible" data-es="con confitura de frutos rojos y arándanos frescos."
+              data-en="with red fruit jam and fresh blueberries.">con confitura de frutos rojos y arándanos frescos.</p>
+
+            <p class="price">8€</p>
+            <p class="card-intolerance">🥛🌾🌰</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Tarta de queso')"><img class="icon-add"
+                src="/public/images/sopa-icon-add.png"></button>
+
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/postres/postre-brownie.jpg" class="card-img-top h-100 opacity-75"
+            alt="entrante-huevos-trufados">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="BROWNIE DE CHOCOLATE NEGRO" data-en="DARK CHOCOLATE BROWNIE">
+              BROWNIE DE CHOCOLATE NEGRO</h5>
+            <p class="card-text traducible" data-es="con nueces y helado de vainilla. Vegetariano."
+              data-en="with nuts and vanilla ice cream. Vegetarian.">con nueces y helado de vainilla. Vegetariano.</p>
+
+            <p class="price">8€</p>
+            <p class="card-intolerance">🥛🌾🌰</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Brownie de chocolate negro')"
+              name="brownie-chocolate"><img class="icon-add" src="/public/images/sopa-icon-add.png"></button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="bebidas">
+      <h2 class="titulo-cat container d-flex justify-content-top traducible" data-es="Bebidas" data-en="Drinks">Bebidas
+      </h2>
+      <div class="container-fluid d-flex flex-wrap justify-content-center mt-5">
+        <div class="card mx-3 bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/bebidas/bebidas-agua.jpg" class="card-img-top h-100 opacity-75"
+            alt="entrante-croqueta-carrillera">
+          <div class="card-body ">
+            <h5 class="card-title traducible" data-es="Agua/Agua con gas" data-en="Water/Sparkling Water">Agua/Agua con
+              gas</h5>
+            <p class="price">3€</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Agua')" name="agua"><img class="icon-add"
+                src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
+
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/bebidas/bebidas-refrescos.jpg" class="card-img-top h-100 opacity-75"
+            alt="entrante-ensalada-pato">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="Refrescos" data-en="Soft drinks">Refrescos</h5>
+
+
+            <p class="price">3€</p>
+
+            <button onclick="agregarAlCarrito('Refresco')" name="Refrescos" class="abtn btn btn-sm"><img
+                class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
+
+          </div>
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/bebidas/bebidas-vinos.jpg" class="card-img-top h-100 opacity-75"
+            alt="entrante-huevos-trufados">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="Vinos" data-en="Wines">Vinos</h5>
+
+
+            <p class="price">7€</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('Vino')" name="vinos"><img class="icon-add"
+                src="/public/images/coctel-con-rodaja-de-limon-icon.png"></a>
+
+          </div>
+
+        </div>
+        <div class="card mx-3  bg-transparent" style="width: 18rem; border: none;">
+          <img src="/public/images/el-mediterraneo/bebidas/bebidas-cocteles.jpg" class="card-img-top h-100 opacity-75"
+            alt="entrante-huevos-trufados">
+          <div class="card-body">
+            <h5 class="card-title traducible" data-es="Cócteles" data-en="Cocktails">Cócteles</h5>
+            <p class="price">8€</p>
+
+            <button class="abtn btn btn-primary" onclick="agregarAlCarrito('cóctel')" name="cocteles"><img
+                class="icon-add" src="/public/images/coctel-con-rodaja-de-limon-icon.png"></button>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="toastAgregado" class="toast align-items-center  border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body traducible" data-es="Plato agregado al pedido 🍽️" data-en="Dish added to order 🍽️">
+          Plato agregado al pedido 🍽️
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/traduccion.js"></script>
+  <script src="src/send_order.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,9 +1,8 @@
 let pedido = [];
 
-
 function agregarAlCarrito(nombre, precio) {
   const itemExistente = pedido.find(item => item.nombre === nombre);
-  
+
   if (itemExistente) {
     itemExistente.cantidad += 1;
   } else {
@@ -12,7 +11,7 @@ function agregarAlCarrito(nombre, precio) {
 
   actualizarVistaPedido();
   const toast = new bootstrap.Toast(document.getElementById('toastAgregado'));
-toast.show();
+  toast.show();
 
 }
 
