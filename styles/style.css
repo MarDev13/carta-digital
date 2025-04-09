@@ -6,6 +6,23 @@
   font-weight: 400;
   font-style: normal;
 }
+
+#btn-idioma-es{
+  border-radius: 50% !important;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(/public/images/icon_spain.png) !important;
+background-size: cover;  
+}
+
+#btn-idioma-en{
+  border-radius: 50% !important;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(/public/images/icon-reino-unido.png) !important;
+background-size: cover;
+  
+}
 .section{
   margin-top: 4rem;
 }

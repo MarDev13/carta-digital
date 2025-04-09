@@ -1,5 +1,6 @@
 let pedido = [];
 
+
 function agregarAlCarrito(nombre, precio) {
   const itemExistente = pedido.find(item => item.nombre === nombre);
   
